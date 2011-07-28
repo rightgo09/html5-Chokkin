@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+		<title>Chokkin!!</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css">
+		<link rel="stylesheet" href="css.css">
+		<script src="jquery.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+
+		<div id="index" data-role="page" data-theme="a">
+			<div data-role="header">
+				<h1>Chokkin!! 0.01</h1>
+				<a href="#my" data-icon="star" data-transition="pop" data-iconpos="right" class="ui-btn-right">My</a>
+			</div>
+			<div data-role="content">
+				<h1>何を切り取る？</h1>
+				<form method="get" action="#hateb" data-ajax="false" onsubmit="return isExistKeyword();">
+					<div data-role="fieldcontain">
+						<label for="keyword">切り取る言葉:</label>
+						<input type="search" name="keyword" id="keyword" value=""
+							placeholder="タッチして入力" data-theme="a"><br>
+						<br>
+						<button type="submit" id="chokkin" data-theme="b">切り取る</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="twitter" data-role="page" data-theme="a">
+			<div data-role="header">
+				<a href="#index" data-icon="back" data-direction="reverse">New</a>
+				<h1>Twitter｜Chokkin</h1>
+				<a href="#my" data-icon="star" data-transition="pop" data-iconpos="right">My</a>
+			</div>
+			<div data-role="content">
+				<h1 class="keyword"></h1>
+				<div id="tweet_content"></div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="main">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-theme="b" data-icon="search" data-iconpos="top">Twitter</a></li>
+						<li><a href="#hateb" data-theme="a" data-icon="search" data-iconpos="top">はてなB!</a></li>
+						<li class="btnReloadTwitter"><a href="#" data-theme="a" data-icon="refresh" data-iconpos="top" data-transition="flip">更新</a></li>
+						<li class="btnSaveTwitter"><a href="#" data-theme="e" data-icon="plus" data-iconpos="top">保存</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="hateb" data-role="page" data-theme="a">
+			<div data-role="header">
+				<a href="#index" data-icon="back" data-direction="reverse">New</a>
+				<h1>はてなB!｜Chokkin</h1>
+				<a href="#my" data-icon="star" data-transition="pop" data-iconpos="right">My</a>
+			</div>
+			<div data-role="content">
+				<h1 class="keyword"></h1>
+				<div id="hateb_content"></div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="main">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#twitter" data-theme="a" data-icon="search" data-iconpos="top">Twitter</a></li>
+						<li><a href="#" data-theme="b" data-icon="search" data-iconpos="top">はてなB!</a></li>
+						<li class="btnReloadHateb"><a href="#" data-theme="a" data-icon="refresh" data-iconpos="top" data-transition="flip">更新</a></li>
+						<li class="btnSaveHateb"><a href="#" data-theme="e" data-icon="plus" data-iconpos="top">保存</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="my" data-role="page" data-theme="a">
+			<div data-role="header">
+				<a href="#index" data-icon="back" data-transition="pop" data-direction="reverse">Back</a>
+				<h1>My｜Chokkin</h1>
+			</div>
+			<div data-role="content">
+				<h1>Myデータ</h1>
+				<div id="my_content">
+					<ul data-role="listview" data-theme="a"></ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="mydata" data-role="page" data-theme="a">
+			<div data-role="header">
+				<a href="#my" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+				<h1>MyData｜Chokkin</h1>
+			</div>
+			<div data-role="content">
+				<h1>Myデータ</h1>
+				<div id="mydata_content">
+					<h1></h1>
+					<div id="mydata_content_content"></div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
+

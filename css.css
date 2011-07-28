@@ -1,0 +1,82 @@
+li.ui-block-d > .ui-btn-active {
+	border: 1px solid #F7C942;
+	background: #fadb4e;
+	font-weight: bold;
+	color: #333333;
+	text-shadow: 0 1px 0 #fff;
+	background-image: -moz-linear-gradient(top, #fceda7, #fadb4e);
+	background-image: -webkit-gradient(linear,left top,left bottom,
+		color-stop(0, #fceda7),
+		color-stop(1, #fadb4e));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fceda7', EndColorStr='#fadb4e')";
+}
+h1.keyword {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.tweet {
+	text-align: left;
+	border: 1px solid #000000;
+	background-color: #666666;
+	margin-top: 10px;
+	color: #ffffff;
+	text-shadow: none;
+	word-break: break-all;
+}
+.tweet_profile_image {
+	float: left;
+	width: 50px;
+}
+.tweet_profile_image > img {
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	padding: 0;
+}
+.tweet_right {
+	margin-left: 55px;
+}
+.tweet_from_user {
+	font-weight: bold;
+}
+.tweet_created_at {
+	color: #00a800;
+}
+
+
+.rssBody {
+	text-align: left;
+}
+.rssHeader {
+	display: none;
+}
+.rssBody > ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+li.rssRow {
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+	border: 1px solid #999999;
+	text-shadow: none;
+	word-break: break-all;
+}
+li.rssRow h4 {
+	margin: 0;
+	padding: 0;
+}
+li.rssRow h4 a {
+	color: #9999ff;
+}
+li.rssRow > div {
+	color: #00a800;
+}
+li.rssRow p {
+	margin: 0;
+	padding: 0;
+}
+li.rssRow div.rssMedia {
+	display: none;
+}
